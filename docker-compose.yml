@@ -12,9 +12,8 @@ services:
   pg_admin:
     image: dpage/pgadmin4:latest
     restart: always
-    environment:
-      - PGADMIN_DEFAULT_EMAIL=shpakstas007@gmail.com
-      - PGADMIN_DEFAULT_PASSWORD=12345
+    env_file:
+      - .env
     ports:
       - '5050:80'
     
